@@ -6,7 +6,11 @@ const waterDripping = () => {
   return (
     <div className="place-self-center lg:place-self-start">
       <div className="relative">
-        <img className="aspect-square" src={Plant} alt="Plant" />
+        <img
+          className="aspect-square drop-shadow-black"
+          src={Plant}
+          alt="Plant"
+        />
         <img
           className="aspect-square absolute top-0 left-[120px] h-7 animate-raindrop"
           src={WaterDrop}
