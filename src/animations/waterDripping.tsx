@@ -10,6 +10,8 @@ const waterDripping = () => {
           className="aspect-square drop-shadow-black"
           src={Plant}
           alt="Plant"
+          height={"100%"}
+          width={"100%"}
         />
         <img
           className="aspect-square absolute top-0 left-[120px] h-7 animate-raindrop"
