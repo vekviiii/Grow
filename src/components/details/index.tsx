@@ -1,4 +1,11 @@
+import { useState } from "react";
+import { Card, CardNobrdr } from "../../utils/card component";
+import { TrashIcon } from "@heroicons/react/24/outline";
+import { GlobeAltIcon } from "@heroicons/react/24/solid";
+
 const Details = () => {
+  let [IsChecked, setIsChecked] = useState(false);
+
   return (
     <>
       <h1>h1</h1>
@@ -8,6 +15,7 @@ const Details = () => {
       <h5>h5</h5>
       <h6>h6</h6>
 
+      {/* Divider */}
       <div className="mt-5 pt-5"></div>
 
       <h1>Title</h1>
@@ -20,9 +28,42 @@ const Details = () => {
         cupidatat sint deserunt sunt fugiat aliqua velit.
       </p>
 
+      {/* Divider */}
       <div className="mt-5 pt-5"></div>
 
-      <button>Press me 🥺</button>
+      <div className="siblings">
+        <button><GlobeAltIcon className="size-5"/></button>
+        <button className="btn-delete mx-2"><TrashIcon className="size-5" /></button>
+
+        <input type="text" placeholder="enter name" />
+
+        <label className="toggle mx-2">
+          <input
+            type="checkbox"
+            checked={IsChecked}
+            onChange={() => setIsChecked(!IsChecked)} // Update the state when toggled
+          />
+          <span className="slider"></span>
+        </label>
+      </div>
+
+      {/* Divider */}
+      <div className="mt-5 pt-5"></div>
+
+      <Card>
+        <h2>Title for card</h2>
+        <p>
+          Culpa proident minim culpa pariatur sunt adipisicing sint non
+          excepteur esse sunt consequat ad est.
+        </p>
+      </Card>
+      <CardNobrdr>
+        <h2>Title for card</h2>
+        <p>
+          Culpa proident minim culpa pariatur sunt adipisicing sint non
+          excepteur esse sunt consequat ad est.
+        </p>
+      </CardNobrdr>
     </>
   );
 };
