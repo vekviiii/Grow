@@ -15,6 +15,8 @@ const Details = () => {
       <h5>h5</h5>
       <h6>h6</h6>
 
+      <p>Testing the pipeline</p>
+
       {/* Divider */}
       <div className="mt-5 pt-5"></div>
 
