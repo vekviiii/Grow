@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, CardNobrdr } from "../../utils/card component";
 import { TrashIcon } from "@heroicons/react/24/outline";
 import { GlobeAltIcon } from "@heroicons/react/24/solid";
+import { UserIcon } from "@heroicons/react/24/solid";
 
 const Details = () => {
   let [IsChecked, setIsChecked] = useState(false);
@@ -15,14 +16,12 @@ const Details = () => {
       <h5>h5</h5>
       <h6>h6</h6>
 
-      <p>Testing the pipeline</p>
-
       {/* Divider */}
       <div className="mt-5 pt-5"></div>
 
       <h1>Title</h1>
       <h2>Ullamco aliquip adipisicing deserunt</h2>
-      <p style={{ padding: "0px 50% 0px 0px" }}>
+      <p>
         Sit ullamco sunt Lorem aute sint sint veniam esse cupidatat labore
         veniam enim reprehenderit culpa. Sunt commodo Lorem qui cupidatat
         eiusmod Lorem sit et veniam. Tempor ad laborum quis quis cupidatat
@@ -37,11 +36,15 @@ const Details = () => {
         <button><GlobeAltIcon className="size-5"/></button>
         <button className="btn-delete mx-2"><TrashIcon className="size-5" /></button>
 
-        <input type="text" placeholder="enter name" />
+        <label className="relative">
+          <input type="text" placeholder="enter name" id="name" />
+          <UserIcon className="size-5 Input-Icon lighter-color-Icon"/>
+        </label>
 
         <label className="toggle mx-2">
           <input
             type="checkbox"
+            id="checker"
             checked={IsChecked}
             onChange={() => setIsChecked(!IsChecked)} // Update the state when toggled
           />

@@ -21,6 +21,7 @@ p
     color: var(--theme-color);
     font-size: var(--font-p);
     box-sizing: border-box;
+    padding: 0px 50% 0px 0px; 
 }
 
 h1
@@ -77,7 +78,7 @@ input {
     --input-border-width: 0.01rem;
     border: var(--input-border-width) solid var(--theme-color);
     border-radius: 6px;
-    padding: 6px 12px;
+    padding: 6px 6px 6px 28px;
     caret-color: var(--theme-color);
     font-size: 14px;
     transition: border-width 0.2s ease-in-out;
@@ -91,6 +92,14 @@ input:focus {
     border-color: var(--theme-color); /* Ensure consistent focus state */
     outline: none;
     border-width: var(--input-border-width) var(--input-border-width) 0.1rem var(--input-border-width);
+}
+
+
+.relative .Input-Icon
+{
+    position: absolute;
+    top: 3px;
+    left: 6px;
 }
 
 /* Toggle Wrapper */
@@ -146,4 +155,9 @@ input:focus {
 .siblings
 {
     display: inline;
+}
+
+.lighter-color-Icon
+{
+    fill: #464444ec;
 }

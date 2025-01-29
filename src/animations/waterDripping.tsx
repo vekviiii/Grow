@@ -7,6 +7,7 @@ const waterDripping = () => {
     <div className="place-self-center lg:place-self-start">
       <div className="relative">
         <img
+          id="headerImg"
           className="aspect-square drop-shadow-black"
           src={Plant}
           alt="Plant"
