@@ -31,7 +31,7 @@ const FloatingStuff = () => {
       >
         <div className="thisWillGrow">
           <PlusIcon
-            className={`${expanded ? "size-0" : "size-6"}`}
+            className={`${expanded ? "size-0" : "size-6"} icon`}
             style={{ fill: "white" }}
           />
           <div className="floaters">Floater</div>

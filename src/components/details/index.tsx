@@ -33,12 +33,16 @@ const Details = () => {
       <div className="mt-5 pt-5"></div>
 
       <div className="siblings">
-        <button><GlobeAltIcon className="size-5"/></button>
-        <button className="btn-delete mx-2"><TrashIcon className="size-5" /></button>
+        <button>
+          <GlobeAltIcon className="size-5" />
+        </button>
+        <button className="btn-delete mx-2">
+          <TrashIcon className="size-5" />
+        </button>
 
         <label className="relative">
           <input type="text" placeholder="enter name" id="name" />
-          <UserIcon className="size-5 Input-Icon lighter-color-Icon"/>
+          <UserIcon className="size-5 Input-Icon lighter-color-Icon" />
         </label>
 
         <label className="toggle mx-2">
