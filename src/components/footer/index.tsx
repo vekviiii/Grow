@@ -3,7 +3,7 @@ import "./index.css";
 const Footer = () => {
   return (
     <>
-      <div className="bg-conical-to-b lg:bg-gradient-to-r from-[#141414] to-[#333]">
+      <div className="bg-conical-to-b bg-gradient-to-r from-[#141414] to-[#333]">
         <div className="container mx-auto">
           <div className="img-container">
             <div>

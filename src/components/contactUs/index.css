@@ -1,0 +1,24 @@
+.cntct-btn
+{
+    display: flex;
+    justify-content: end;
+}
+
+.input-css
+{
+    margin-block: 15px;
+}
+
+.error-text {
+    color: red;
+    font-size: 12px;
+}
+
+#validSubmitCard {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+  }
+  
