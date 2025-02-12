@@ -11,13 +11,25 @@ function App() {
   return (
     <BrowserRouter>
       <Header />
-      <div className="container mx-auto">
-        <Routes>
-          <Route path="/" element={<Facade />} />
-          <Route path="/product" element={<Details />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Facade />} />
+        <Route
+          path="/product"
+          element={
+            <div className="container mx-auto">
+              <Details />
+            </div>
+          }
+        />
+        <Route
+          path="/contact-us"
+          element={
+            <div className="container mx-auto">
+              <ContactUs />
+            </div>
+          }
+        />
+      </Routes>
       <Footer />
       <FloatingStuff />
     </BrowserRouter>
