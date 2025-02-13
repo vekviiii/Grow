@@ -7,9 +7,9 @@ const Header = () => {
         <div className="text-[#85A947] text-3xl my-auto">GROW.</div>
             <ul className="text-white flex gap-4 m-auto">
                 <li><a href="/" className="nav-links">Home</a></li>
-                <li><a href="product" className="nav-links">Product</a></li>
-                <li><a href="about-us" className="nav-links">About Us</a></li>
-                <li><a href="contact-us" className="nav-links">Contact Us</a></li>
+                <li><a href="/product" className="nav-links">Product</a></li>
+                <li><a href="/about-us" className="nav-links">About Us</a></li>
+                <li><a href="/contact-us" className="nav-links">Contact Us</a></li>
             </ul>
       </div>
     </div>
