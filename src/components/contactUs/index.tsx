@@ -17,7 +17,7 @@ const ContactUs = () => {
   const [name, setName] = useState("");
   const [animatedText, setAnimatedText] = useState("")
 
-  const onSubmit = (data: any) => {
+  const onSubmit = () => {
     animationOnSubmit();
     animateText(" Please be patient while we steal your data :) ");
   };
