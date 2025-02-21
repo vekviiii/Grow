@@ -10,7 +10,7 @@ const Footer = () => {
               <img
                 width="30"
                 height="30"
-                src="https://img.icons8.com/ios-glyphs/30/facebook-f.png"
+                src="/../../images/footer/facebook.svg"
                 alt="facebook-f"
               />
             </div>
@@ -18,23 +18,23 @@ const Footer = () => {
               <img
                 width="30"
                 height="30"
-                src="https://img.icons8.com/ios-glyphs/30/instagram-new.png"
+                src="/../../images/footer/instagram.svg"
                 alt="instagram-new"
               />
             </div>
             <div>
               <img
-                width="24"
-                height="24"
-                src="https://img.icons8.com/android/24/twitter.png"
+                width="30"
+                height="30"
+                src="/../../images/footer/twitter.svg"
                 alt="twitter"
               />
             </div>
             <div>
               <img
-                width="24"
-                height="24"
-                src="https://img.icons8.com/android/24/linkedin.png"
+                width="35"
+                height="35"
+                src="/../../images/footer/linkedin.svg"
                 alt="linkedin"
               />
             </div>

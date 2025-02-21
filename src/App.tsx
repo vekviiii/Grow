@@ -6,6 +6,7 @@ import Footer from "./components/footer";
 import FloatingStuff from "./utils/card component/floating Stuff";
 import Header from "./components/header";
 import ContactUs from "./components/contactUs";
+import AboutUs from "./components/aboutUs";
 
 function App() {
   return (
@@ -18,6 +19,14 @@ function App() {
           element={
             <div className="container mx-auto">
               <Details />
+            </div>
+          }
+        />
+        <Route
+          path="/about-us"
+          element={
+            <div className="container mx-auto">
+              <AboutUs />
             </div>
           }
         />

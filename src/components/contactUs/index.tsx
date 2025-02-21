@@ -16,20 +16,24 @@ const ContactUs = () => {
 
   const [name, setName] = useState("");
   const [animatedText, setAnimatedText] = useState("")
-
   const onSubmit = () => {
     animationOnSubmit();
     animateText(" Please be patient while we steal your data :) ");
-  };
 
+  };
   const animationOnSubmit = () => {
     const width = document.getElementById("validSubmitCard");
+    
 
     if (width) {
       width.style.width = "200%";
 
       setTimeout(() => {
         width.style.width = "100%";
+        // Reset text
+        
+      setAnimatedText("");
+      setName("");
       }, 10 * 1000);
     }
   };
