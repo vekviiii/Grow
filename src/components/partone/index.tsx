@@ -3,28 +3,28 @@ import "../../animations/fadeIn.css";
 import { Card } from "../../utils/cardComponent";
 import { motion, useScroll, useTransform } from "framer-motion";
 
-const WaterDrop = () => {
-  const { scrollYProgress } = useScroll(); // ✅ Track entire window scroll
+// const WaterDrop = () => {
+//   const { scrollYProgress } = useScroll(); // ✅ Track entire window scroll
 
-  // ✅ Map scroll progress to move water drop from top to bottom of viewport
-  const y = useTransform(scrollYProgress, [0, 1], [-500, window.innerHeight - 500]);
+//   // ✅ Map scroll progress to move water drop from top to bottom of viewport
+//   const y = useTransform(scrollYProgress, [0, 1], [-500, window.innerHeight - 500]);
 
-  return (
-    <motion.div
-      style={{
-        position: "fixed", // ✅ Stays fixed on the screen
-        left: "50%",
-        transform: "translateX(-50%)",
-        width: 20,
-        height: 20,
-        borderRadius: "50%",
-        backgroundColor: "blue",
-        zIndex: "999",
-        y, // ✅ Animate vertical movement
-      }}
-    />
-  );
-};
+//   return (
+//     <motion.div
+//       style={{
+//         position: "fixed", // ✅ Stays fixed on the screen
+//         left: "50%",
+//         transform: "translateX(-50%)",
+//         width: 20,
+//         height: 20,
+//         borderRadius: "50%",
+//         backgroundColor: "blue",
+//         zIndex: "999",
+//         y, // ✅ Animate vertical movement
+//       }}
+//     />
+//   );
+// };
 
 const PartOne = () => {
   useEffect(() => {
