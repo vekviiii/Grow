@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import "../../animations/fadeIn.css";
 import { Card } from "../../utils/cardComponent";
-import { motion, useScroll, useTransform } from "framer-motion";
+// import { motion, useScroll, useTransform } from "framer-motion";
 
 // const WaterDrop = () => {
 //   const { scrollYProgress } = useScroll(); // ✅ Track entire window scroll
