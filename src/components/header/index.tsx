@@ -1,6 +1,6 @@
 
-
 const Header = () => {
+
   return (
     <div className="bg-gradient-to-b lg:bg-gradient-to-r from-[#141414] to-[#333] sticky top-0" style={{zIndex: "999"}}>
       <div className="container mx-auto flex py-2" >

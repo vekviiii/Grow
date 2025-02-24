@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { UserIcon, EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
-import { InputField } from "../../utils/card component/FormHelpers";
+import { InputField } from "../../utils/FormHelpers";
 
 import "./index.css";
 
@@ -18,7 +18,7 @@ const ContactUs = () => {
   const [animatedText, setAnimatedText] = useState("")
   const onSubmit = () => {
     animationOnSubmit();
-    animateText(" Please be patient while we steal your data :) ");
+    animateText(` Please be patient while we steal your data :)`);
 
   };
   const animationOnSubmit = () => {
@@ -42,7 +42,7 @@ const ContactUs = () => {
     setAnimatedText(""); // Reset text
     let index = 0;
     const interval = setInterval(() => {
-      if (index < text.length) {  // Safety check
+      if (index <= text.length - 2) {  // Safety check
         setAnimatedText((prev) => prev + text[index]);
         index++;
       } else {

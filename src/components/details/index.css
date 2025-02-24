@@ -1,0 +1,14 @@
+.slick-next::before, .slick-prev::before
+{
+    color: var(--theme-color);
+}
+
+.slick-dots li button::before
+{
+    color: var(--theme-color);
+}
+
+.slick-dots li.slick-active button::before
+{
+    color: var(--theme-color-darker);
+}

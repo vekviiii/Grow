@@ -4,7 +4,7 @@ import WaterDrop from "../images/single-water-drop-on-transparent-background.web
 
 const waterDripping = () => {
   return (
-    <div className="place-self-center lg:place-self-start">
+    <div className="place-self-center md:place-self-start">
       <div className="relative">
         <img
           id="headerImg"

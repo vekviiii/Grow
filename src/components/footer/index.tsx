@@ -40,10 +40,10 @@ const Footer = () => {
             </div>
           </div>
           <ul>
-            <li><a href="/"></a>Home</li>
-            <li><a href="/product">Product</a></li>
-            <li><a href="/about-us">About Us</a></li>
-            <li><a href="/contact-us"></a>Contact</li>
+            <li><a href="/" className="nav-links">Home</a></li>
+            <li><a href="/product" className="nav-links">Product</a></li>
+            <li><a href="/about-us" className="nav-links">About Us</a></li>
+            <li><a href="/contact-us" className="nav-links">Contact</a></li>
           </ul>
           <div className="text-gray-500 text-[12px] py-2 ">
             Copyright © 2025 All Rights Reserved. GROW.

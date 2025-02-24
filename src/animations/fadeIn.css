@@ -3,9 +3,19 @@
     opacity: 0;
 }
 
+.fade-in-left
+{
+    opacity: 0;
+}
+
 .fade-in-animation
 {
     animation: fadeIn 0.5s forwards;
+}
+
+.fade-in-left-animation
+{
+    animation: fadeInLeft 0.3s forwards;
 }
 
 @keyframes fadeIn
@@ -19,5 +29,19 @@
     {
         opacity: 1;
         transform: translateY(0px);
+    }
+}
+
+@keyframes fadeInLeft
+{
+    0%
+    {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100%
+    {
+        opacity: 1;
+        transform: translateX(0px);
     }
 }

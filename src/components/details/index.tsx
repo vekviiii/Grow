@@ -1,80 +1,129 @@
-import { useState } from "react";
-import { Card, CardNobrdr } from "../../utils/card component";
-import { TrashIcon } from "@heroicons/react/24/outline";
-import { GlobeAltIcon } from "@heroicons/react/24/solid";
-import { UserIcon } from "@heroicons/react/24/solid";
+import Slider from "react-slick";
 
-const Details = () => {
-  let [IsChecked, setIsChecked] = useState(false);
+import { Card } from "../../utils/cardComponent";
+
+import { CurrencyRupeeIcon } from "@heroicons/react/24/outline";
+
+import "./index.css";
+
+function Details() {
+  const products = [
+    {
+      id: 1,
+      name: "Plant one",
+      price: "49.00",
+      image: "two-leaves.svg",
+    },
+    {
+      id: 2,
+      name: "Plant one",
+      price: "99.00",
+      image: "spiky-leaves.svg",
+    },
+    {
+      id: 3,
+      name: "Plant one",
+      price: "free",
+      image: "wavy-leaves.svg",
+    },
+    {
+      id: 4,
+      name: "Plant one",
+      price: "69.00",
+      image: "weird-leaves.svg",
+    },
+    {
+      id: 5,
+      name: "Plant one",
+      price: "29.00",
+      image: "two-leaves.svg",
+    },
+    {
+      id: 6,
+      name: "Plant one",
+      price: "19.00",
+      image: "spiky-leaves.svg",
+    },
+    {
+      id: 7,
+      name: "Plant one",
+      price: "119.00",
+      image: "wavy-leaves.svg",
+    },
+    {
+      id: 8,
+      name: "Plant one",
+      price: "49.00",
+      image: "weird-leaves.svg",
+    },
+  ];
+
+  const settings: any = {
+    arrows: true,
+    draggable: true,
+    dots: true,
+    infinite: true,
+    speed: 400,
+    slidesToShow: 4,
+    slidesToScroll: 3,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1024, // Screens below 1024px
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 2,
+        },
+      },
+      {
+        breakpoint: 768, // Screens below 768px
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480, // Mobile screens below 480px
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <>
-      <h1>h1</h1>
-      <h2>h2</h2>
-      <h3>h3</h3>
-      <h4>h4</h4>
-      <h5>h5</h5>
-      <h6>h6</h6>
-
-      {/* Divider */}
-      <div className="mt-5 pt-5"></div>
-
-      <h1>Title</h1>
-      <h2>Ullamco aliquip adipisicing deserunt</h2>
-      <p>
-        Sit ullamco sunt Lorem aute sint sint veniam esse cupidatat labore
-        veniam enim reprehenderit culpa. Sunt commodo Lorem qui cupidatat
-        eiusmod Lorem sit et veniam. Tempor ad laborum quis quis cupidatat
-        consectetur occaecat. Duis enim commodo enim cupidatat ad aliqua
-        cupidatat sint deserunt sunt fugiat aliqua velit.
-      </p>
-
-      {/* Divider */}
-      <div className="mt-5 pt-5"></div>
-
-      <div className="siblings">
-        <button>
-          <GlobeAltIcon className="size-5" />
-        </button>
-        <button className="btn-delete mx-2">
-          <TrashIcon className="size-5" />
-        </button>
-
-        <label className="relative">
-          <input type="text" placeholder="enter name" id="name" />
-          <UserIcon className="size-5 Input-Icon lighter-color-Icon" />
-        </label>
-
-        <label className="toggle mx-2">
-          <input
-            type="checkbox"
-            id="checker"
-            checked={IsChecked}
-            onChange={() => setIsChecked(!IsChecked)} // Update the state when toggled
-          />
-          <span className="slider"></span>
-        </label>
+      <h1>Products</h1>
+      <div className="slider-container">
+        <Slider {...settings}>
+          {products.map((item) => (
+            <>
+              <Card key={item.id} className="mx-4">
+                <div className="flex justify-center">
+                  <img width="200px" src={`/images/partOne/${item.image}`} />
+                </div>
+              </Card>
+              <div className="mt-1 mx-4 flex justify-between">
+                <div>
+                  <div>{item.name}</div>
+                  <span className="text-[gray] text-[14px]">₹{item.price}</span>
+                </div>
+                <div className="mt-1">
+                  <button id={item.id.toString()}>
+                    <div className="flex justify-center">
+                      <CurrencyRupeeIcon className="size-6" />
+                      <div className="mx-1">Buy</div>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </>
+          ))}
+        </Slider>
       </div>
-
-      {/* Divider */}
-      <div className="mt-5 pt-5"></div>
-
-      <Card>
-        <h2>Title for card</h2>
-        <p>
-          Culpa proident minim culpa pariatur sunt adipisicing sint non
-          excepteur esse sunt consequat ad est.
-        </p>
-      </Card>
-      <CardNobrdr>
-        <h2>Title for card</h2>
-        <p>
-          Culpa proident minim culpa pariatur sunt adipisicing sint non
-          excepteur esse sunt consequat ad est.
-        </p>
-      </CardNobrdr>
     </>
   );
-};
+}
 
 export default Details;
