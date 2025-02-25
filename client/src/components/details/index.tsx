@@ -1,12 +1,22 @@
+import React from 'react';
 import Slider from "react-slick";
+import axios from 'axios';
 
 import { Card } from "../../utils/cardComponent";
 
 import { CurrencyRupeeIcon } from "@heroicons/react/24/outline";
 
 import "./index.css";
+import { useEffect } from "react";
 
 function Details() {
+
+  useEffect(()=>{
+    axios.get('/api/product')
+    .then((res)=> console.log(res.data))
+    .catch((err)=>console.error(err))
+  },[])
+
   const products = [
     {
       id: 1,
@@ -98,7 +108,7 @@ function Details() {
       <div className="slider-container">
         <Slider {...settings}>
           {products.map((item) => (
-            <>
+            <React.Fragment key={item.id}>
               <Card key={item.id} className="mx-4">
                 <div className="flex justify-center">
                   <img width="200px" src={`/images/partOne/${item.image}`} />
@@ -118,7 +128,7 @@ function Details() {
                   </button>
                 </div>
               </div>
-            </>
+            </React.Fragment>
           ))}
         </Slider>
       </div>
